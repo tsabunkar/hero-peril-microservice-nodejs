@@ -1,0 +1,22 @@
+{
+  "name": "microservice-nodejs-101",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-hero": "nodemon heroes/heroes.js 8001",
+    "start-peril": "nodemon threats/threats.js 8002",
+    "start": "concurrently --kill-others \"npm run start-hero\" \"npm run start-peril\""
+  },
+  "author": "tejas",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  }
+}

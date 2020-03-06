@@ -1,0 +1,40 @@
+http://localhost:8001/heroes
+
+###
+
+GET http://localhost:8001/powers HTTP/1.1
+
+###
+
+POST http://localhost:8001/hero/1 HTTP/1.1
+content-type: application/json
+
+{    
+    "type": "IRON-MAN",
+    "displayName": "TEJAS",
+    "powers": [
+      2,
+      5
+    ],
+    "img": "tejas.jpg",
+    "busy": false
+}
+
+
+###
+
+GET http://localhost:8002/threats HTTP/1.1
+
+
+###
+
+POST http://localhost:8002/assignment HTTP/1.1
+content-type: application/json
+
+{    
+   "heroId": 1,
+   "threatId" : 1
+}
+
+
+###
